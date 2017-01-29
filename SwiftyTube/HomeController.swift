@@ -16,7 +16,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(videoCell.self, forCellWithReuseIdentifier: "SwiftyTubeCell")
         navigationController?.navigationBar.isTranslucent = false
-        
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         // Setup the custom menu bar
         setupMenuBar()
         
@@ -31,6 +32,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func setupMenuBar() {
         
         view.addSubview(menuBar)
+        navigationController?.hidesBarsOnSwipe = true
         
         view.addConstrantsWithFormat(format: "H:|[v0]|", views: menuBar)
         view.addConstrantsWithFormat(format: "V:|[v0(50)]", views: menuBar)

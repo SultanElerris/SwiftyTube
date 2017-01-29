@@ -8,16 +8,8 @@
 
 import UIKit
 
-class videoCell:UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+class videoCell: BaseCell {
+
     // Thumbnail Image View (Lazy Property)
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -65,7 +57,7 @@ class videoCell:UICollectionViewCell {
     
     
     // View Setup
-    func setupViews() {
+    override func setupViews() {
         
         
         //Thumbnail
