@@ -13,11 +13,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         navigationItem.title = "Home"
-        
         collectionView?.backgroundColor = UIColor.white
-        
         collectionView?.register(videoCell.self, forCellWithReuseIdentifier: "SwiftyTubeCell")
+        navigationController?.navigationBar.isTranslucent = false
         
     }
 
@@ -29,7 +29,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // Delegate Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 50
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -42,7 +42,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     //Layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 250)
+        
+        
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+        return CGSize(width: view.frame.width, height: height + 16 + 68)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -59,26 +62,34 @@ class videoCell:UICollectionViewCell {
     // Thumbnail Image View (Lazy Property)
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.lightGray
+        imageView.image = UIImage(named: "linux")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 5
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
     // Separator (Lazy Property)
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
         return view
     }()
     
     let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.orange
+        imageView.image = UIImage(named: "linux")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor.purple
+        label.text = "Linux Tux"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
         
@@ -86,7 +97,8 @@ class videoCell:UICollectionViewCell {
     
     let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor.red
+        label.text = "I am a penguin and I like it"
+        label.textColor = UIColor.lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
         
@@ -115,7 +127,7 @@ class videoCell:UICollectionViewCell {
         addConstrantsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
         
         
-        addConstrantsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView,userProfileImageView ,separatorView)
+        addConstrantsWithFormat(format: "V:|-16-[v0]-4-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView,userProfileImageView ,separatorView)
       
         
         addConstrantsWithFormat(format: "H:|[v0]|", views: separatorView)
@@ -146,7 +158,7 @@ class videoCell:UICollectionViewCell {
         addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         
         // Height
-        addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        addConstraint(NSLayoutConstraint(item: subtitleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
         
         
         

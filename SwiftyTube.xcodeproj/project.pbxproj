@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E407E80F1E3D66CE0004C310 /* linux.png in Resources */ = {isa = PBXBuildFile; fileRef = E407E80E1E3D66CE0004C310 /* linux.png */; };
 		E487A1261E230ADD00EC752E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487A1251E230ADD00EC752E /* AppDelegate.swift */; };
 		E487A1281E230ADD00EC752E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487A1271E230ADD00EC752E /* ViewController.swift */; };
 		E487A12B1E230ADD00EC752E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E487A1291E230ADD00EC752E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E407E80E1E3D66CE0004C310 /* linux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linux.png; sourceTree = "<group>"; };
 		E487A1221E230ADD00EC752E /* SwiftyTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487A1251E230ADD00EC752E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E487A1271E230ADD00EC752E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				E487A1291E230ADD00EC752E /* Main.storyboard */,
 				E487A12C1E230ADD00EC752E /* Assets.xcassets */,
 				E487A12E1E230ADD00EC752E /* LaunchScreen.storyboard */,
+				E407E80E1E3D66CE0004C310 /* linux.png */,
 				E487A1311E230ADD00EC752E /* Info.plist */,
 			);
 			path = SwiftyTube;
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E407E80F1E3D66CE0004C310 /* linux.png in Resources */,
 				E487A1301E230ADD00EC752E /* LaunchScreen.storyboard in Resources */,
 				E487A12D1E230ADD00EC752E /* Assets.xcassets in Resources */,
 				E487A12B1E230ADD00EC752E /* Main.storyboard in Resources */,
@@ -503,6 +507,7 @@
 				E487A14C1E230ADD00EC752E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E487A14D1E230ADD00EC752E /* Build configuration list for PBXNativeTarget "SwiftyTubeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				E487A14F1E230ADD00EC752E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E487A1501E230ADD00EC752E /* Build configuration list for PBXNativeTarget "SwiftyTubeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				E487A1521E230ADD00EC752E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
