@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        BuddyBuildSDK.setup()
+        
         
         // setup UIViewController as the root view controller
         window = UIWindow(frame: UIScreen.main.bounds)
